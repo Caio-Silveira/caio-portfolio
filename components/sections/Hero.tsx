@@ -1,3 +1,4 @@
+
 "use client";
 
 import { motion } from "framer-motion";
@@ -8,7 +9,7 @@ export default function Hero() {
   const go = (id: string) => document.querySelector(id)?.scrollIntoView({ behavior: "smooth" });
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 gradient-bg opacity-10" />
+      <div className="absolute inset-0 bg-[#070712]" />\n      <div className="absolute inset-0 opacity-[0.18] [background-image:linear-gradient(rgba(139,92,246,.28)_1px,transparent_1px),linear-gradient(90deg,rgba(96,165,250,.22)_1px,transparent_1px)] [background-size:72px_72px]" />\n      <div className="absolute inset-0 [background:radial-gradient(circle_at_50%_20%,rgba(139,92,246,.28),transparent_38%),radial-gradient(circle_at_70%_55%,rgba(59,130,246,.12),transparent_32%)]" />\n      <div className="absolute inset-0 [background:radial-gradient(ellipse_at_center,transparent_25%,rgba(7,7,18,.82)_85%)]" />
       <motion.div className="absolute top-24 left-[8%] w-56 h-56 bg-purple-500/10 rounded-full blur-3xl"
         animate={{ y: [0,-25,0], x:[0,15,0] }} transition={{ duration:7, repeat:Infinity }} />
       <motion.div className="absolute bottom-20 right-[8%] w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"
@@ -53,3 +54,4 @@ export default function Hero() {
     </section>
   );
 }
+
