@@ -43,7 +43,7 @@ export default function Hero() {
           <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:.8}}
             className="flex justify-center gap-6 text-muted-foreground">
             <a href="https://github.com/Caio-Silveira" target="_blank" rel="noreferrer" aria-label="GitHub"><Github className="h-6 w-6"/></a>
-            <a href="mailto:silderdevprofissional07@gmail.com" aria-label="E-mail"><Mail className="h-6 w-6"/></a>
+            <a href="mailto:silverdevprofissional07@gmail.com" aria-label="E-mail"><Mail className="h-6 w-6"/></a>
           </motion.div>
         </div>
       </div>
