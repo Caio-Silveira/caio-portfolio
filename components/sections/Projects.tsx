@@ -5,7 +5,7 @@ import {ArrowUpRight,Github,X} from "lucide-react";
 import {projects} from "@/data/projects";
 export default function Projects(){const[active,setActive]=useState<(typeof projects)[number]|null>(null);useEffect(()=>{document.body.style.overflow=active?"hidden":"";return()=>{document.body.style.overflow=""}},[active]);return <section id="projects" className="section-shell"><div className="shell">
  <div className="flex items-end justify-between gap-6 mb-12 md:mb-16"><div><p className="eyebrow">03 / Seleção</p><h2 className="section-title mt-6">Projetos<span className="text-[#D08A5B]">.</span></h2></div><p className="hidden md:block text-[10px] uppercase tracking-[.18em] text-[#66625D] pb-2">Produto / Software / Experimento</p></div>
- <div className="project-grid">{projects.map((p,i)=><motion.button key={p.id} onClick={()=>setActive(p)} initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true,amount:.25}} transition={{delay:i*.05}} className={"project-tile tile-"+i}>
+ <div className="project-grid">{projects.map((p,i)=><motion.button key={p.slug} onClick={()=>setActive(p)} initial={{opacity:0,y:18}} whileInView={{opacity:1,y:0}} viewport={{once:true,amount:.25}} transition={{delay:i*.05}} className={"project-tile "+(p.featured?"project-featured ":"")+"tile-"+(i%5)}>
   <span className="project-no">0{i+1}</span><ArrowUpRight className="project-arrow"/><div className="absolute left-6 right-6 bottom-6"><div className="project-meta mb-3">{p.tags.slice(0,3).join(" · ")}</div><h3 className="project-title">{p.title}</h3></div>
  </motion.button>)}</div>
  </div>
