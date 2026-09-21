@@ -1,17 +1,4 @@
 "use client";
-
-import { ArrowUp, Github, Mail } from "lucide-react";
-
-export default function Footer(){
- return <footer className="border-t bg-muted/20">
-  <div className="container mx-auto px-4 py-10 max-w-6xl flex flex-col md:flex-row gap-6 justify-between items-center">
-   <div><p className="font-heading font-bold text-xl">Caio Silveira</p><p className="text-sm text-muted-foreground">Soluções digitais para negócios · São Paulo</p></div>
-   <div className="flex items-center gap-5 text-muted-foreground">
-    <a href="https://github.com/Caio-Silveira" target="_blank" rel="noreferrer" aria-label="GitHub"><Github className="h-5 w-5"/></a>
-    <a href="mailto:silverdevprofissional07@gmail.com" aria-label="E-mail"><Mail className="h-5 w-5"/></a>
-    <button onClick={()=>scrollTo({top:0,behavior:"smooth"})} className="flex items-center gap-2 text-sm"><ArrowUp className="h-4 w-4"/>Topo</button>
-   </div>
-  </div>
-  <div className="container mx-auto px-4 pb-8 max-w-6xl text-xs text-muted-foreground">© {new Date().getFullYear()} Caio Silveira.</div>
- </footer>
-}
+import { ArrowUp, Github, Linkedin, Mail } from "lucide-react";
+import SilverMark from "@/components/brand/SilverMark";
+export default function Footer(){return <footer className="bg-[#101312] text-[#eee9df] border-t border-white/[.06]"><div className="container mx-auto px-5 py-8 max-w-6xl flex flex-col sm:flex-row gap-5 justify-between items-start sm:items-center"><div className="flex items-center gap-3"><SilverMark className="w-10 text-[#D08A5B]"/><p className="text-sm font-medium text-[#b7b6b0]">Caio Silveira</p></div><div className="flex items-center gap-5 text-[#777b76]"><a href="https://github.com/Caio-Silveira" target="_blank" rel="noreferrer" aria-label="GitHub"><Github className="h-4 w-4"/></a><a href="https://www.linkedin.com/in/caio-silveira07" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin className="h-4 w-4"/></a><a href="mailto:silverdevprofissional07@gmail.com" aria-label="Email"><Mail className="h-4 w-4"/></a><button onClick={()=>scrollTo({top:0,behavior:"smooth"})} className="flex items-center gap-1.5 text-xs"><ArrowUp className="h-3.5 w-3.5"/>Topo</button></div></div></footer>}
